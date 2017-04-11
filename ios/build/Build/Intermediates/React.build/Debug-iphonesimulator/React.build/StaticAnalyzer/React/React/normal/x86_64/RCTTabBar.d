@@ -1,22 +1,22 @@
 dependencies: \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/RCTTabBar.m \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/RCTTabBar.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTEventDispatcher.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTBridge.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTBridgeModule.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTFrameUpdate.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTInvalidating.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/RCTTabBarItem.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/RCTComponent.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/RCTView.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/RCTBorderStyle.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/RCTPointerEvents.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/RCTViewControllerProtocol.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/RCTWrapperViewController.h \
-  /Users/xuyanzhang/Desktop/react_ios/react_ios_coding/node_modules/react-native/React/Views/UIView+React.h
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/RCTTabBar.m \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/RCTTabBar.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/RCTTabBarItem.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/RCTView.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/RCTViewControllerProtocol.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/RCTWrapperViewController.h \
+  /Users/xuyanzhang/MyCode/react_native_coding/node_modules/react-native/React/Views/UIView+React.h

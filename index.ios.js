@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import MainController from './Controller/Main'
+import MainController from './Componet/MainComponent'
 import {
   AppRegistry,
   StyleSheet,

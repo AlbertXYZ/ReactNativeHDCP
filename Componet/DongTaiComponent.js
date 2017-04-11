@@ -10,10 +10,6 @@ import {
   Image,
   ScrollView
 } from 'react-native';
-import {
-	navStyles,
-	NavigationBarRouteMapper
-} from './NavigationConfig';
 
 export default class DongTaiComponent	extends Component {
 
@@ -23,47 +19,9 @@ export default class DongTaiComponent	extends Component {
 			selectTitle: '动态'
 		};
 	}
-	configureScene(route) {
-		return Navigator.SceneConfigs.PushFromRight;
-	}
-	renderScene(route, navigator) {
-		return <route.component navigator = {
-			navigator
-		} {...route.params
-		}
-		/>;
-	}
-	render() {
-
-		let defaultName = "DongTaiController";
-		let defaultComponent = DongTaiController;
-
-		return ( < Navigator style = {
-				{
-					flex: 1
-				}
-			}
-			initialRoute = {
-				{
-					title: this.state.selectTitle,
-					component: defaultComponent
-				}
-			}
-			configureScene = {
-				this.configureScene
-			}
-			renderScene = {
-				this.renderScene
-			}
-			s navigationBar = { < Navigator.NavigationBar style = {
-					navStyles.navContainer
-				}
-				routeMapper = {
-					NavigationBarRouteMapper
-				}
-				/>
-			}
-			/>
+	render(){
+		return (
+			<DongTaiController navigator = {this.props.navigator}/>
 		);
 	};
 }

@@ -10,10 +10,6 @@ import {
   Image,
   ScrollView
 } from 'react-native';
-import {
-	navStyles,
-	NavigationBarRouteMapper
-} from './NavigationConfig';
 
 export default class CategoryComponent	extends Component {
 
@@ -23,47 +19,9 @@ export default class CategoryComponent	extends Component {
 			selectTitle: '分类'
 		};
 	}
-	configureScene(route) {
-		return Navigator.SceneConfigs.PushFromRight;
-	}
-	renderScene(route, navigator) {
-		return <route.component navigator = {
-			navigator
-		} {...route.params
-		}
-		/>;
-	}
-	render() {
-
-		let defaultName = "CategoryController";
-		let defaultComponent = CategoryController;
-
-		return ( < Navigator style = {
-				{
-					flex: 1
-				}
-			}
-			initialRoute = {
-				{
-					title: this.state.selectTitle,
-					component: defaultComponent
-				}
-			}
-			configureScene = {
-				this.configureScene
-			}
-			renderScene = {
-				this.renderScene
-			}
-			s navigationBar = { < Navigator.NavigationBar style = {
-					navStyles.navContainer
-				}
-				routeMapper = {
-					NavigationBarRouteMapper
-				}
-				/>
-			}
-			/>
+	render(){
+		return (
+			<CategoryController navigator = {this.props.navigator}/>
 		);
 	};
 }

@@ -5,7 +5,9 @@
  */
 
 import React, { Component } from 'react';
-import MainController from './Componet/MainComponent'
+import MainComponent from './js/Componet/MainComponent';
+
+
 import {
   AppRegistry,
   StyleSheet,
@@ -13,4 +15,4 @@ import {
   View
 } from 'react-native';
 
-AppRegistry.registerComponent('react_ios_coding', () => MainController);
+AppRegistry.registerComponent('react_ios_coding', () => MainComponent);

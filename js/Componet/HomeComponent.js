@@ -16,7 +16,10 @@ import {
 
 import {RequestManager} from '../NetWork/RequestManager';
 import {HDHM01_URL} from '../Utils/Const';
-import {ScreenHeight,ScreenWidth,HDMainTextColor} from '../CommonStyle/commonStyle';
+import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor} from '../CommonStyle/commonStyle';
+import px2dp from '../Utils/px2dp';
+import HDNavigationBar from '../Custom/HDNavigationBar';
+import BaseComponent from './BaseComponent'
 
 export default class HomeComponent	extends Component {
 
@@ -58,10 +61,7 @@ class HomeController extends Component{
 			}).done();
 	}
 	collectAction(flag){
-
-		// if (this.props.navigator) {
-		// 	this.props.navigator.push({title:'列表',name:'ListController',component:ListController,params:{message:'返回'}});
-		// }
+		
 		if (flag == '1') {
 			//排行榜
 		}else if(flag == '2'){
@@ -72,8 +72,13 @@ class HomeController extends Component{
 			//晒一晒
 		}
 	}
+
 	render(){
 		return (
+			<View style={theme.contailer}>
+			<View style={theme.actionNavBar}>
+                    <Text style={{color: 'white', fontSize: px2dp(20)}}>首页</Text>
+                </View>
 			<ScrollView style={styles.contailer}>
 				<Image source={require('../resource/home_bg.jpg')} style={{height: 200}} />
 			    <MenuTag navigator = {this.props.navigator}/>
@@ -83,6 +88,7 @@ class HomeController extends Component{
 				</Text>
 				</TouchableOpacity>
 			</ScrollView>
+			</View>
 		);
 	};
 }
@@ -136,7 +142,7 @@ class MenuTag extends Component {
 	};
 }
 
-class ListController extends Component{
+class ListController extends BaseComponent{
 	constructor(props) {
 	  super(props);
 	  this.state = {message:''};
@@ -158,10 +164,12 @@ class ListController extends Component{
 			this.props.navigator.pop();
 		}
 	}
-
+	
 	render(){
 		return (
 			<View style={styles.contailer}>
+
+  			    <HDNavigationBar title={'列表'} onPress = {this.handleBack.bind(this)}/>
 				<TouchableHighlight style={styles.contentBtn} onPress={this.pushAction.bind(this)}>
 				<Text style={styles.content}>	
 				这是第二页
@@ -217,12 +225,11 @@ class DetailController extends Component{
 }
 
 var styles = StyleSheet.create({
-
 	contailer:{
-		flex:4,
-		backgroundColor:'white',
+		flex:1,
+		backgroundColor:HDBGColor,
 		flexDirection: 'column',
-		marginTop:64,	
+		marginTop:0
 	},
 	contentBtn:{
 		height: 50,
@@ -237,7 +244,8 @@ var styles = StyleSheet.create({
 	},
 	menuTag:{
 		width: ScreenWidth/4, 
-		height: 80,
+		height: 90,
+		backgroundColor:'white',
 		flex: 1, 
 		flexDirection: 'column',
 		alignItems: 'center'

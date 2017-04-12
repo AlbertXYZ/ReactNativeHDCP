@@ -14,17 +14,14 @@ import {
 	DeviceEventEmitter
 } from 'react-native';
 
+import {theme} from '../CommonStyle/commonStyle';
+import px2dp from '../Utils/px2dp';
+
 export default class GuangComponent extends Component {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			selectTitle: '逛逛'
-		};
-	}
-	render(){
+	render() {
 		return (
-			<GuangController navigator = {this.props.navigator}/>
+			<GuangController/>
 		);
 	};
 }
@@ -33,11 +30,17 @@ class GuangController extends Component {
 
 	render() {
 		return (
-
-			< ScrollView style = {
-				styles.contailer
+			< View style = {
+				theme.contailer
 			} >
-			< /ScrollView>
+			<View style={theme.actionNavBar}>
+                    <Text style={{color: 'white', fontSize: 20}}>逛逛</Text>
+                </View>
+            < ScrollView style = {
+				styles.contailer
+				} >
+				< /ScrollView>
+			< /View>
 		);
 	};
 }
@@ -45,20 +48,9 @@ class GuangController extends Component {
 var styles = StyleSheet.create({
 
 	contailer: {
-		flex: 4,
+		flex: 1,
 		backgroundColor: 'white',
 		flexDirection: 'column',
 		marginTop: 64,
-	},
-	contentBtn: {
-		height: 50,
-		marginTop: 10,
-		justifyContent: 'center', // 内容居中显示
-		backgroundColor: '#ff1049',
-		alignItems: 'center'
-	},
-	content: {
-		fontSize: 30,
-		color: 'white',
-	},
+	}
 });

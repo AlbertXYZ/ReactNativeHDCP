@@ -4,6 +4,30 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppIcon29x29@2x.png</key>
+		<data>
+		EPtlHD49AFKnVxq9NOZbz++OItc=
+		</data>
+		<key>AppIcon29x29@3x.png</key>
+		<data>
+		8jvvzPWWKVe2sRtKQLZBgmikQMI=
+		</data>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		MuIePDG2GjUoDSGV4Lu7Sku11/g=
+		</data>
+		<key>AppIcon40x40@3x.png</key>
+		<data>
+		gmV2WRii61n6YpYpCKaXOg2Tosc=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		gmV2WRii61n6YpYpCKaXOg2Tosc=
+		</data>
+		<key>AppIcon60x60@3x.png</key>
+		<data>
+		l7iVOMc0dJgCEedgZ9Bm5S7ZjzQ=
+		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
 		Xyqwaxb9mUlbtd+ONEBz+sWIvaA=
@@ -227,7 +251,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Zg1KfNrxgL46v6Mct17y3bDjGbY=
+		LpSS/r6U7OKWX9LvOhXqWGE4B94=
+		</data>
+		<key>LaunchImage-700-568h@2x.png</key>
+		<data>
+		N0raH45W/5Rj8xMnBYqC3P4B0kY=
+		</data>
+		<key>LaunchImage-700@2x.png</key>
+		<data>
+		WW46YWI3+CeP/tJ224YRdNGjn7k=
+		</data>
+		<key>LaunchImage-800-667h@2x.png</key>
+		<data>
+		R/XNgyBc7HUz0SJVqJXvP2OIHXA=
+		</data>
+		<key>LaunchImage-800-Portrait-736h@3x.png</key>
+		<data>
+		wqNomWKyZmsLEORgxHi1wBpfhzk=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -256,6 +296,72 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppIcon29x29@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EPtlHD49AFKnVxq9NOZbz++OItc=
+			</data>
+			<key>hash2</key>
+			<data>
+			zJlMbEWw610eDoP5zM769bLT2BJn3bev77yEZa1y/zI=
+			</data>
+		</dict>
+		<key>AppIcon29x29@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8jvvzPWWKVe2sRtKQLZBgmikQMI=
+			</data>
+			<key>hash2</key>
+			<data>
+			q5sHYPkCcaG5SHCuVF0Bfx7TjGILzanhJAV6F2hHZ9E=
+			</data>
+		</dict>
+		<key>AppIcon40x40@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MuIePDG2GjUoDSGV4Lu7Sku11/g=
+			</data>
+			<key>hash2</key>
+			<data>
+			Dwf0wq8EmaBP40KQaFeuiAjU5ls8f76Eg4UWfrVJFHA=
+			</data>
+		</dict>
+		<key>AppIcon40x40@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gmV2WRii61n6YpYpCKaXOg2Tosc=
+			</data>
+			<key>hash2</key>
+			<data>
+			IjN/yAF8JMWqUWfZn+3WK1f9hi2HjdftXmP9+ehDTdY=
+			</data>
+		</dict>
+		<key>AppIcon60x60@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gmV2WRii61n6YpYpCKaXOg2Tosc=
+			</data>
+			<key>hash2</key>
+			<data>
+			IjN/yAF8JMWqUWfZn+3WK1f9hi2HjdftXmP9+ehDTdY=
+			</data>
+		</dict>
+		<key>AppIcon60x60@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l7iVOMc0dJgCEedgZ9Bm5S7ZjzQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			9R7jP88PkhwFKtxBDoWbPzxsy5SOh2uKFx27q0CtaBY=
+			</data>
+		</dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<dict>
 			<key>hash</key>
@@ -855,6 +961,50 @@
 			<key>hash2</key>
 			<data>
 			b9YIyVX96976hp2NWTB5WiYG/wRjSco9afIzJ4LhLqM=
+			</data>
+		</dict>
+		<key>LaunchImage-700-568h@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			N0raH45W/5Rj8xMnBYqC3P4B0kY=
+			</data>
+			<key>hash2</key>
+			<data>
+			GfPamGP0E7WZ9NjaUho5YDXqNic7RmQWBodAsWTkNqQ=
+			</data>
+		</dict>
+		<key>LaunchImage-700@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WW46YWI3+CeP/tJ224YRdNGjn7k=
+			</data>
+			<key>hash2</key>
+			<data>
+			2SRDs1PCZT8CufbDNCS7duz3CJiWgOVUuVpnrp+OBs8=
+			</data>
+		</dict>
+		<key>LaunchImage-800-667h@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			R/XNgyBc7HUz0SJVqJXvP2OIHXA=
+			</data>
+			<key>hash2</key>
+			<data>
+			QMRfkfMzz82/mNv7lXo8B55U2kJPdxDFPFSUc9OFggI=
+			</data>
+		</dict>
+		<key>LaunchImage-800-Portrait-736h@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wqNomWKyZmsLEORgxHi1wBpfhzk=
+			</data>
+			<key>hash2</key>
+			<data>
+			qP5i/kA3lbO8DYKNc2C2M3G++UwhEoQ09IGHc6WKCrc=
 			</data>
 		</dict>
 		<key>PlugIns/react_ios_codingTests.xctest.dSYM/Contents/Info.plist</key>

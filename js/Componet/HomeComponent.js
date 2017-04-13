@@ -112,27 +112,27 @@ class MenuTag extends Component {
 
 	render(){
 		return (
-			<View style={{flex: 1, flexDirection: 'row'}}>
-			    <TouchableOpacity onPress={this.collectAction.bind(this,'1')}>
-			     <View style={styles.menuTag}>
+			<View style={{flexDirection: 'row'}}>
+			    <TouchableOpacity onPress={this.collectAction.bind(this,'1')} style={styles.menuTag}>
+			     <View >
 					<Image source={require("../resource/Home/menu_ico_collect.png")} style = {styles.menuIcon}/>
 					<Text style={styles.menuTitle}>排行榜</Text>
 			     </View>
 			     </TouchableOpacity>
-			     <TouchableOpacity onPress={this.collectAction.bind(this,'2')}>
-			     <View style={styles.menuTag} >
+			     <TouchableOpacity onPress={this.collectAction.bind(this,'2')} style={styles.menuTag}>
+			     <View>
 					<Image source={require("../resource/Home/menu_ico_recipe.png")} style = {styles.menuIcon}/>
 					<Text style={styles.menuTitle}>营养餐桌</Text>
 			     </View>
 			     </TouchableOpacity>
-			     <TouchableOpacity onPress={this.collectAction.bind(this,'3')}>
-			     <View style={styles.menuTag} >
+			     <TouchableOpacity onPress={this.collectAction.bind(this,'3')} style={styles.menuTag}>
+			     <View>
 					<Image source={require("../resource/Home/menu_ico_publish.png")} style = {styles.menuIcon}/>
 					<Text style={styles.menuTitle}>热门分类</Text>
 			     </View>
 			     </TouchableOpacity>
-			     <TouchableOpacity onPress={this.collectAction.bind(this,'3')}>
-			     <View style={styles.menuTag} >
+			     <TouchableOpacity onPress={this.collectAction.bind(this,'3')} style={styles.menuTag}>
+			     <View>
 					<Image source={require("../resource/Home/menu_ico_Camera.png")} style = {styles.menuIcon}/>
 					<Text style={styles.menuTitle}>晒一晒</Text>
 			     </View>

@@ -34,13 +34,13 @@ class HomeController extends Component{
 
 	constructor(props) {
 	  super(props);
-	  this.state = {homeObject:null};
+	  this.state = {homeObject:''};
 	}
 	onPressButton(){
-		if (this.props.navigator) {
-			this.props.navigator.push({title:'列表',name:'ListController',component:ListController,params:{message:'返回'}});
-		}
-		// this.loadData()
+		// if (this.props.navigator) {
+		// 	this.props.navigator.push({title:'列表',name:'ListController',component:ListController,params:{message:'返回'}});
+		// }
+		this.loadData()
 	};
 	loadData(){
 		//fetch请求
@@ -84,9 +84,10 @@ class HomeController extends Component{
 			    <MenuTag navigator = {this.props.navigator}/>
 				<TouchableOpacity onPress={this.onPressButton.bind(this)} style={styles.contentBtn}>
 				<Text style={styles.content}>	
-				这是第一页
+				使用CodePush实现热更新{this.state.homeObject.request_id}
 				</Text>
 				</TouchableOpacity>
+				
 			</ScrollView>
 			</View>
 		);
@@ -232,15 +233,17 @@ var styles = StyleSheet.create({
 		marginTop:0
 	},
 	contentBtn:{
+		flex:1,
 		height: 50,
   		marginTop: 10,
-    	justifyContent: 'center', // 内容居中显示
     	backgroundColor: '#ff1049',
     	alignItems: 'center'
 	},
 	content:{
+		marginTop: 10,
 		fontSize:30,
 		color:'white',
+		justifyContent: 'center', // 内容居中显示
 	},
 	menuTag:{
 		width: ScreenWidth/4, 

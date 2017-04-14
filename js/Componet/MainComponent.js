@@ -27,11 +27,6 @@ export default class MainComponent extends Component {
             ]);
         }
         else{
-             Alert.alert("提示","有新版本",[
-                {text:"Ok", onPress:()=>{
-                    console.log("点了OK");
-                }}
-            ]);
             codePush.sync({
                 deploymentKey: 'vFzaog5WoEOxhoYZ54YHjJr5J4AJVkWo_CPaG',
                 updateDialog: {

@@ -101,7 +101,7 @@ var styles = StyleSheet.create({
     },  
     selectedTabText: {  
       color: '#81c04d',  
-      fontSize: 13  
+      fontSize: 12  
     },  
     icon: {  
       width: 20,          

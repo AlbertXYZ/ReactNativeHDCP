@@ -51,6 +51,6 @@ var styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: 'white',
 		flexDirection: 'column',
-		marginTop: 64,
+		marginTop: 0,
 	}
 });

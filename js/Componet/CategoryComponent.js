@@ -66,14 +66,14 @@ class CategoryController extends Component {
 			}).done();
 	}
 	
-	selectRows(){
-		alert(11)
+	selectRows(cate,rowID){
+		alert(rowID)
 	}
 
 	renderRow(cate,sectionID, rowID) {
 	 	console.log(cate)
 	 	return (
-	 	<TouchableOpacity key={sectionID} onPress={this.selectRows}>
+	 	<TouchableOpacity key={rowID} onPress={this.selectRows.bind(this,cate,rowID)}>
 	 	<View style={{flexDirection: 'column'}}>
 			<View style={styles.cateView}>
 			<Image style={styles.cateImage} source = {{uri:cate.ImgUrl}}
@@ -96,7 +96,7 @@ class CategoryController extends Component {
                 </View>
             <ListView style = {styles.contailer}
          	 dataSource={this.state.dataSource}
-         	 renderRow={this.renderRow}
+         	 renderRow={this.renderRow.bind(this)}
       	    />
 			< /View>
 		);

@@ -52,7 +52,7 @@ class HomeController extends Component{
 		//this.loadData()
 	};
 	loadData(){
-		//fetch请求
+		
 		fetch(HDHM01_URL, {
 				method: 'GET',
 				headers: {
@@ -262,8 +262,8 @@ class ShowPicTextView extends Component{
 		return (<View style={styles.showPicTextView}>
 							<Image style={styles.showPic} source={{uri:data.Cover}}/>
 							<View style={{flex:1,backgroundColor:'white',flexDirection:'column',}}>
-								<Text style={styles.showTitle}>{data.Title}</Text>
-								<Text style={styles.showUserName}>by {data.UserName}</Text>
+								<Text style={styles.showTitle} numberOfLines={1}>{data.Title}</Text>
+								<Text style={styles.showUserName} numberOfLines={2}>by {data.UserName}</Text>
 								<Text style={styles.showContent} numberOfLines={2} >{data.Content}</Text>
 							</View>
 						</View>);

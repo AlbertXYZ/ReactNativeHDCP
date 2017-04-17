@@ -9,7 +9,8 @@ import {
   StatusBar,
   Image,
   ScrollView,
-  Platform
+  Platform,
+  ListView
 } from 'react-native';
 
 import {theme} from '../CommonStyle/commonStyle';
@@ -19,6 +20,7 @@ export default class CenterComponent extends Component {
 
 	constructor(props) {
 		super(props);
+		
 		this.state = {
 			
 		};

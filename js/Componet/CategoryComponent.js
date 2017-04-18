@@ -3,10 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Navigator,
   TouchableHighlight,
   TouchableOpacity,
-  StatusBar,
   Image,
   ScrollView,
   ListView
@@ -15,6 +13,7 @@ import {
 import {theme,HDMainTextColor} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
 import {HDCG01_URL} from '../Utils/Const';
+import CategoryListController from './CategoryListController'
 
 export default class CategoryComponent	extends Component {
 
@@ -67,7 +66,10 @@ class CategoryController extends Component {
 	}
 	
 	selectRows(cate,rowID){
-		alert(rowID)
+		
+		if (this.props.navigator) {
+			this.props.navigator.push({title:'详情',name:'CategoryListController',component:CategoryListController,args:{tagList:cate.Tags,title:cate.Cate}});
+		}
 	}
 
 	renderRow(cate,sectionID, rowID) {
@@ -110,13 +112,13 @@ var styles = StyleSheet.create({
 		marginTop:0,	
 	},
 	cateView:{
-		height:px2dp(50),justifyContent: 'center',alignItems: 'center',flexDirection: 'row'
+		height:px2dp(44),alignItems: 'center',flexDirection: 'row'
 	},
 	cateImage:{
 		backgroundColor:'white',height:px2dp(25),width:px2dp(25),marginLeft:px2dp(15)
 	},
 	cateText:{
-		color:'white',flex:1,marginLeft:px2dp(15),color:HDMainTextColor
+		flex:1,marginLeft:px2dp(15),color:HDMainTextColor
 	},
 	cateEvent:{
 		backgroundColor:'white',height:px2dp(20),width:px2dp(20),marginRight:px2dp(15)

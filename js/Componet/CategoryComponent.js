@@ -112,18 +112,32 @@ var styles = StyleSheet.create({
 		marginTop:0,	
 	},
 	cateView:{
-		height:px2dp(44),alignItems: 'center',flexDirection: 'row'
+		height:px2dp(44),
+		alignItems: 'center',
+		flexDirection: 'row'
 	},
 	cateImage:{
-		backgroundColor:'white',height:px2dp(25),width:px2dp(25),marginLeft:px2dp(15)
+		backgroundColor:'white',
+		height:px2dp(25),
+		width:px2dp(25),
+		marginLeft:px2dp(15)
 	},
 	cateText:{
-		flex:1,marginLeft:px2dp(15),color:HDMainTextColor
+		flex:1,
+		marginLeft:px2dp(15),
+		color:HDMainTextColor
 	},
 	cateEvent:{
-		backgroundColor:'white',height:px2dp(20),width:px2dp(20),marginRight:px2dp(15)
+		backgroundColor:'white',
+		height:px2dp(20),
+		width:px2dp(20),
+		marginRight:px2dp(15)
 	},
 	cellLine:{
-		backgroundColor:'rgb(200,200,200)',height:px2dp(0.5),flex:1,marginBottom:0,marginLeft:px2dp(15)
+		backgroundColor:'rgb(200,200,200)',
+		height:px2dp(0.5),
+		flex:1,
+		marginBottom:0,
+		marginLeft:px2dp(15)
 	}
 });

@@ -79,18 +79,31 @@ var styles = StyleSheet.create({
     marginTop:0
   },
   tagView:{
-    height:px2dp(44),alignItems: 'center',flexDirection: 'row'
+    height:px2dp(44),
+    alignItems: 'center',
+    flexDirection: 'row'
   },
   tagImage:{
-    backgroundColor:'white',height:px2dp(25),width:px2dp(25),marginLeft:px2dp(15)
+    backgroundColor:'white',
+    height:px2dp(25),
+    width:px2dp(25),
+    marginLeft:px2dp(15)
   },
   tagText:{
-    flex:1,marginLeft:px2dp(15),color:HDMainTextColor
+    flex:1,
+    marginLeft:px2dp(15),
+    color:HDMainTextColor
   },
   tagEvent:{
-    backgroundColor:'white',height:px2dp(20),width:px2dp(20),marginRight:px2dp(15)
+    backgroundColor:'white',
+    height:px2dp(20),
+    width:px2dp(20),
+    marginRight:px2dp(15)
   },
   cellLine:{
-    backgroundColor:'rgb(200,200,200)',marginLeft:px2dp(15),marginBottom:0,height:px2dp(0.6)
+    backgroundColor:'rgb(200,200,200)',
+    marginLeft:px2dp(15),
+    marginBottom:0,
+    height:px2dp(0.6)
   }
 })

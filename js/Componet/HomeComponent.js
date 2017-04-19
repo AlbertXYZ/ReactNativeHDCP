@@ -475,7 +475,8 @@ var styles = StyleSheet.create({
 		marginLeft:px2dp(5),
 		marginRight:px2dp(15),
 		marginTop:px2dp(5),
-		height:px2dp(20)
+		height:px2dp(20),
+		color:HDMainTextColor
 	},
 	showUserName:{
 		fontSize:px2dp(16),
@@ -489,7 +490,8 @@ var styles = StyleSheet.create({
 		marginLeft:px2dp(5),
 		marginRight:px2dp(15),
 		marginTop:px2dp(10),
-		height:px2dp(40)
+		height:px2dp(40),
+		color:HDMainTextColor
 	},
 	showMoreView:{
 		marginLeft:px2dp(15),

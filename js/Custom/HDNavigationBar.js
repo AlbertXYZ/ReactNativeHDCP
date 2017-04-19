@@ -45,8 +45,8 @@ var styles = StyleSheet.create({
     text:{
     	color: 'white', 
     	fontSize: px2dp(20),
-    	marginRight:20,
-    	width:ScreenWidth-84,
-    	textAlign:'center'
+    	marginRight:38,
+    	textAlign:'center',
+      flex:1
     }
 })

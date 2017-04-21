@@ -15,6 +15,7 @@ import {
 
 import {theme} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
+import {TabNames} from '../Utils/Const';
 
 export default class CenterComponent extends Component {
 
@@ -40,7 +41,7 @@ class CenterController extends Component {
 				theme.contailer
 			} >
 			<View style={theme.actionNavBar}>
-                    <Text style={{color: 'white', fontSize: 20}}>我</Text>
+                    <Text style={{color: 'white', fontSize: 20}}>{TabNames[4]}</Text>
                 </View>
             < ScrollView style = {
 				styles.contailer

@@ -12,7 +12,7 @@ import {
 
 import {theme,HDMainTextColor} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
-import {HDCG01_URL} from '../Utils/Const';
+import {HDCG01_URL,TabNames} from '../Utils/Const';
 import CategoryListController from './CategoryListController'
 
 export default class CategoryComponent	extends Component {
@@ -94,7 +94,7 @@ class CategoryController extends Component {
 				theme.contailer
 			} >
 			<View style={theme.actionNavBar}>
-                    <Text style={{color: 'white', fontSize: px2dp(20)}}>分类</Text>
+                    <Text style={{color: 'white', fontSize: px2dp(20)}}>{TabNames[2]}</Text>
                 </View>
             <ListView style = {styles.contailer}
          	 dataSource={this.state.dataSource}

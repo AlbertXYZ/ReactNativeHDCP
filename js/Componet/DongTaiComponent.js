@@ -13,6 +13,7 @@ import {
 
 import {theme} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
+import {TabNames} from '../Utils/Const';
 
 export default class DongTaiComponent	extends Component {
 
@@ -37,7 +38,7 @@ class DongTaiController extends Component {
 				theme.contailer
 			} >
 			<View style={theme.actionNavBar}>
-                    <Text style={{color: 'white', fontSize: 20}}>动态</Text>
+                    <Text style={{color: 'white', fontSize: 20}}>{TabNames[3]}</Text>
                 </View>
             < ScrollView style = {
 				styles.contailer

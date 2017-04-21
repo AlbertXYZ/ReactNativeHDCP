@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 
 import {RequestManager} from '../NetWork/RequestManager';
-import {HDHM01_URL} from '../Utils/Const';
+import {HDHM01_URL,TabNames} from '../Utils/Const';
 import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
 import HDNavigationBar from '../Custom/HDNavigationBar';
@@ -88,7 +88,7 @@ class HomeController extends Component{
 		return (
 			<View style={theme.contailer}>
 			<View style={theme.actionNavBar}>
-                    <Text style={{color: 'white', fontSize: px2dp(20)}}>首页</Text>
+                    <Text style={{color: 'white', fontSize: px2dp(20)}}>{TabNames[0]}</Text>
                 </View>
 			<ScrollView style={styles.contailer}>
 				<Image source={require('../resource/home_bg.jpg')} style={{height: 200}} />

@@ -13,6 +13,7 @@ import CategoryComponent from '../Componet/CategoryComponent'
 import CenterComponent from '../Componet/CenterComponent'
 import DongTaiComponent from '../Componet/DongTaiComponent'
 import GuangComponent from '../Componet/GuangComponent'
+import {TabNames} from '../Utils/Const';
 
 export default class HDTabBar extends Component {
 
@@ -20,17 +21,16 @@ export default class HDTabBar extends Component {
     super(props);
     this.state = {
       selectedTab:'Home',
-      tabName: ['首页','逛逛','分类','动态','我']
   };
   }
   render(){
-    const {tabName} = this.state;
+    
     return (
        <View style={styles.container} >  
                 <TabNavigator>  
                     <TabNavigator.Item  
                         selected={this.state.selectedTab === 'Home'}  
-                        title = {tabName[0]}  
+                        title = {TabNames[0]}  
                         titleStyle={styles.tabText}  
                         selectedTitleStyle={styles.selectedTabText}  
                         renderIcon={() => <Image style={styles.icon} source={require("../resource/tabIcon/main_ico_menu_home.png")} />}  
@@ -40,7 +40,7 @@ export default class HDTabBar extends Component {
                     </TabNavigator.Item>  
                     <TabNavigator.Item  
                         selected={this.state.selectedTab === 'Guang'}  
-                        title = {tabName[1]}  
+                        title = {TabNames[1]}  
                         titleStyle={styles.tabText}  
                         selectedTitleStyle={styles.selectedTabText}  
                         renderIcon={() => <Image style={styles.icon} source={require("../resource/tabIcon/main_ico_menu_random.png")} />}  
@@ -50,7 +50,7 @@ export default class HDTabBar extends Component {
                     </TabNavigator.Item>  
                     <TabNavigator.Item  
                         selected={this.state.selectedTab === 'Category'}  
-                        title = {tabName[2]} 
+                        title = {TabNames[2]} 
                         titleStyle={styles.tabText}  
                         selectedTitleStyle={styles.selectedTabText}  
                         renderIcon={() => <Image style={styles.icon} source={require("../resource/tabIcon/main_ico_menu_category.png")} />}  
@@ -60,7 +60,7 @@ export default class HDTabBar extends Component {
                     </TabNavigator.Item>  
                     <TabNavigator.Item  
                         selected={this.state.selectedTab === 'DongTai'}  
-                        title = {tabName[3]}  
+                        title = {TabNames[3]}  
                         titleStyle={styles.tabText}  
                         selectedTitleStyle={styles.selectedTabText}  
                         renderIcon={() => <Image style={styles.icon} source={require("../resource/tabIcon/main_ico_menu_dongtai.png")} />}  
@@ -70,7 +70,7 @@ export default class HDTabBar extends Component {
                     </TabNavigator.Item>  
                     <TabNavigator.Item  
                         selected={this.state.selectedTab === 'Center'}  
-                        title = {tabName[4]}  
+                        title = {TabNames[4]}  
                         titleStyle={styles.tabText}  
                         selectedTitleStyle={styles.selectedTabText}  
                         renderIcon={() => <Image style={styles.icon} source={require("../resource/tabIcon/main_ico_menu_center.png")} />}  

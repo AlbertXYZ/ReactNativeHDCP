@@ -16,6 +16,7 @@ import {
 
 import px2dp from '../Utils/px2dp';
 import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor} from '../CommonStyle/commonStyle';
+import {HDGG01_URL,TabNames} from '../Utils/Const';
 
 export default class GuangComponent extends Component {
 
@@ -28,44 +29,85 @@ export default class GuangComponent extends Component {
 
 class GuangController extends Component {
 
+	constructor(props) {
+	  super(props);
+	
+	  this.state = {
+	  		tagNames:['菜谱大全','APP推荐','厨房宝典','营养餐桌','食材百科','意见反馈'],
+	  		list:[]
+	  };
+	}
+
+	componentDidMount(){
+		this.loadData();
+	}
+
+	loadData(){
+
+		fetch(HDGG01_URL, {
+				method: 'GET',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+				},
+			})
+			.then((response) => response.json())
+			.then((responseData) => {
+				console.log(responseData)
+				this.setState({
+					list:responseData.result.list
+				})
+				
+			}).done();
+	}
+
 	render() {
+
 		return (
 			< View style = {
 				theme.contailer
 			} >
 			<View style={theme.actionNavBar}>
-                    <Text style={{color: 'white', fontSize: 20}}>逛逛</Text>
-                </View>
+                    <Text style={{color: 'white', fontSize: 20}}>{TabNames[1]}</Text>
+            </View>
             < ScrollView style = {
 				styles.contailer
 				} >
-				<View style={{flexDirection: 'row'}}>
+				<View style={styles.item}>
 					<View style={styles.itemView}>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_collect.png')}/>
-						<Text style={styles.itemText}>菜谱大全</Text>
+						<Text style={styles.itemText}>{this.state.tagNames[0]}</Text>
 					</View>
 					<View style={styles.itemView}>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_app.png')}/>
-						<Text style={styles.itemText}>APP推荐</Text>
+						<Text style={styles.itemText}>{this.state.tagNames[1]}</Text>
 					</View>
 					<View style={styles.itemView}>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_recipe.png')}/>
-						<Text style={styles.itemText}>厨房宝典</Text>
+						<Text style={styles.itemText}>{this.state.tagNames[2]}</Text>
 					</View>
 				</View>
-				<View style={{flexDirection: 'row'}}>
+				<View style={styles.line} ></View>
+				<View style={styles.item}>
 					<View style={styles.itemView}>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_effect.png')}/>
-						<Text style={styles.itemText}>营养餐桌</Text>
+						<Text style={styles.itemText}>{this.state.tagNames[3]}</Text>
 					</View>
 					<View style={styles.itemView}>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_knowledge.png')}/>
-						<Text style={styles.itemText}>食材百科</Text>
+						<Text style={styles.itemText}>{this.state.tagNames[4]}</Text>
 					</View>
 					<View style={styles.itemView}>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_suggestion.png')}/>
-						<Text style={styles.itemText}>意见反馈</Text>
+						<Text style={styles.itemText}>{this.state.tagNames[5]}</Text>
 					</View>
+				</View>
+				<View style={{flexDirection: 'column'}}>
+					{
+						this.state.list.map((object,i) => {
+						return (<ImageTextView key={i} data={object}/>);
+					})
+				}
 				</View>
 				< /ScrollView>
 			< /View>
@@ -73,32 +115,87 @@ class GuangController extends Component {
 	};
 }
 
+class ImageTextView extends Component {
+
+	static propTypes = {
+	  data: React.PropTypes.object
+	}
+
+	render(){
+		return (
+			<View>
+			<Image style={styles.ImageTextView} source={{uri:this.props.data.Image}}>
+			<View style={styles.textView}>
+			<Text  style={styles.ImageText}>{this.props.data.Title}</Text>
+			</View>
+			</Image>
+			</View>
+		);
+	}
+}
+
 
 var styles = StyleSheet.create({
 
 	contailer: {
 		flex: 1,
-		backgroundColor: 'white',
+		backgroundColor: HDBGColor,
 		flexDirection: 'column',
 		marginTop: 0
 	},
+	item:{
+		flexDirection: 'row',
+		backgroundColor:'white'
+	},
 	itemView:{
 		flex:1,
-		height:90,
+		height:px2dp(90),
 		flexDirection: 'column',
 		alignItems: 'center',
+		borderRightWidth:0.8,
+		borderColor:HDBGColor,
 	},
 	itemImage:{
-		marginTop:15,
-		marginLeft:20,
-		marginRight:20,
+		marginTop:px2dp(15),
+		marginLeft:px2dp(20),
+		marginRight:px2dp(20),
 		flex:1
 	},
 	itemText:{
 		textAlign:'center',
 		flex:1,
-		height:30,
-		marginTop:10,
+		height:px2dp(30),
+		marginTop:px2dp(10),
 		color:HDMainTextColor
+	},
+	line:{
+		backgroundColor:HDBGColor,
+		height:0.8,
+		flex:1,
+		marginLeft:px2dp(15),
+		marginRight:px2dp(15)
+	},
+	ImageTextView:{
+		flex:1,
+		height:160,
+		marginTop:8,
+		backgroundColor:HDBGColor
+	},
+	textView:{
+		height:30,
+		backgroundColor:'rgba(129,192,77,0.3)',
+		flex:1,
+		marginTop:130,
+		alignItems:'center',
+		justifyContent:'center'
+	},
+	ImageText:{
+		height:20,
+		color:'white',
+		textAlign:'center',
+		backgroundColor:'rgba(129,192,77,0.3)',
+		flex:1,
+		marginTop:5,
+		fontSize:18
 	}
 });

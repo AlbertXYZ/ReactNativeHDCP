@@ -20,6 +20,7 @@ import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor} f
 import px2dp from '../Utils/px2dp';
 import HDNavigationBar from '../Custom/HDNavigationBar';
 import BaseComponent from './BaseComponent'
+import {PullView} from 'react-native-pull';
 
 export default class HomeComponent	extends Component {
 
@@ -62,6 +63,7 @@ class HomeController extends Component{
 			})
 			.then((response) => response.json())
 			.then((responseData) => {
+				
 				console.log(responseData)
 				console.log(responseData.result.collect_list[0])
 				this.setState({
@@ -83,6 +85,13 @@ class HomeController extends Component{
 			//晒一晒
 		}
 	}
+	onPullRelease(resolve) {
+	  //do something
+	  loadData()
+	  setTimeout(() => {
+          resolve();
+      }, 3000);
+	}
 
 	render(){
 		return (
@@ -90,6 +99,7 @@ class HomeController extends Component{
 			<View style={theme.actionNavBar}>
                     <Text style={{color: 'white', fontSize: px2dp(20)}}>{TabNames[0]}</Text>
                 </View>
+            <PullView onPullRelease={this.onPullRelease}  >
 			<ScrollView style={styles.contailer}>
 				<Image source={require('../resource/home_bg.jpg')} style={{height: 200}} />
 			    <MenuTag navigator = {this.props.navigator}/>
@@ -97,6 +107,7 @@ class HomeController extends Component{
 				<CollectListView collectList={this.state.collectList} navigator = {this.props.navigator}/>
 				<WikiListView wikiList={this.state.wikiList} navigator = {this.props.navigator}/>
 			</ScrollView>
+			</PullView>
 			</View>
 		);
 	};

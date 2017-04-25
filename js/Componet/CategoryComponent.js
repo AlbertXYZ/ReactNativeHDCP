@@ -37,8 +37,8 @@ class CategoryController extends Component {
 	  
 	  this.state = {
 	  	dataSource: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => row1 !== row2
-      })
+      	  rowHasChanged: (row1, row2) => row1 !== row2
+        })
 	  };
 	}
 

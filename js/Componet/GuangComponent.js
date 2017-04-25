@@ -17,6 +17,7 @@ import {
 import px2dp from '../Utils/px2dp';
 import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor} from '../CommonStyle/commonStyle';
 import {HDGG01_URL,TabNames} from '../Utils/Const';
+import {PullView} from 'react-native-pull';
 
 export default class GuangComponent extends Component {
 
@@ -61,6 +62,32 @@ class GuangController extends Component {
 			}).done();
 	}
 
+	itemAction(flag){
+
+		switch(flag){
+			case 1:
+			alert('菜谱大全')	
+			break;
+			case 2:
+			alert('APP推荐')	
+			break;
+			case 3:
+			alert('厨房宝典')	
+			break;
+			case 4:
+			alert('营养餐桌')	
+			break;
+			case 5:
+			alert('食材百科')	
+			break;
+			case 6:
+			alert('意见反馈')	
+			break;
+			default:
+			return
+		}
+	}
+
 	render() {
 
 		return (
@@ -74,38 +101,69 @@ class GuangController extends Component {
 				styles.contailer
 				} >
 				<View style={styles.item}>
+					
 					<View style={styles.itemView}>
+					<TouchableOpacity onPress={this.itemAction.bind(this,1)}  >
+						<View>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_collect.png')}/>
 						<Text style={styles.itemText}>{this.state.tagNames[0]}</Text>
+						</View>
+					</TouchableOpacity>
 					</View>
 					<View style={styles.itemView}>
+					<TouchableOpacity onPress={this.itemAction.bind(this,2)}>
+						<View>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_app.png')}/>
 						<Text style={styles.itemText}>{this.state.tagNames[1]}</Text>
+						</View>
+					</TouchableOpacity>
 					</View>
 					<View style={styles.itemView}>
+					<TouchableOpacity onPress={this.itemAction.bind(this,3)}>
+						<View>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_recipe.png')}/>
 						<Text style={styles.itemText}>{this.state.tagNames[2]}</Text>
+						</View>
+					</TouchableOpacity>
 					</View>
+					
 				</View>
 				<View style={styles.line} ></View>
 				<View style={styles.item}>
+					
 					<View style={styles.itemView}>
+					<TouchableOpacity onPress={this.itemAction.bind(this,4)}>
+						<View>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_effect.png')}/>
 						<Text style={styles.itemText}>{this.state.tagNames[3]}</Text>
+						</View>
+					</TouchableOpacity>
 					</View>
+					
+					
 					<View style={styles.itemView}>
+					<TouchableOpacity onPress={this.itemAction.bind(this,5)}>
+						<View>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_knowledge.png')}/>
 						<Text style={styles.itemText}>{this.state.tagNames[4]}</Text>
+						</View>
+					</TouchableOpacity>
 					</View>
+					
 					<View style={styles.itemView}>
+					<TouchableOpacity onPress={this.itemAction.bind(this,6)}>
+						<View>
 						<Image style={styles.itemImage} source={require('../resource/GG/interfix_ico_suggestion.png')}/>
 						<Text style={styles.itemText}>{this.state.tagNames[5]}</Text>
+						</View>
+					</TouchableOpacity>
 					</View>
+					
 				</View>
 				<View style={{flexDirection: 'column'}}>
 					{
 						this.state.list.map((object,i) => {
-						return (<ImageTextView key={i} data={object}/>);
+						return (<ImageTextView key={i} data={object} navigator = {this.props.navigator}/>);
 					})
 				}
 				</View>
@@ -121,8 +179,13 @@ class ImageTextView extends Component {
 	  data: React.PropTypes.object
 	}
 
+	listItemSelectEvent(url){
+		alert(url)
+	}
+
 	render(){
 		return (
+			<TouchableOpacity onPress={this.listItemSelectEvent.bind(this,this.props.data.Url)}>
 			<View>
 			<Image style={styles.ImageTextView} source={{uri:this.props.data.Image}}>
 			<View style={styles.textView}>
@@ -130,6 +193,7 @@ class ImageTextView extends Component {
 			</View>
 			</Image>
 			</View>
+			</TouchableOpacity>
 		);
 	}
 }

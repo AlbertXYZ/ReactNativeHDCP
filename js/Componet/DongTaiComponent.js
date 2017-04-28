@@ -147,7 +147,7 @@ class DongTaiController extends Component {
 				object.data.CommentCnt > 0 ? <View style={styles.commentView}>
 				{
 					object.data.CommentList.map((comment,i)=>{
-						return (<Text style={styles.commentContent}>
+						return (<Text key={i} style={styles.commentContent}>
 						{comment.UserName}:{comment.Content}
 						</Text>);
 					})

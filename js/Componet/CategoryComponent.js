@@ -13,7 +13,7 @@ import {
 import {theme,HDMainTextColor} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
 import {HDCG01_URL,TabNames} from '../Utils/Const';
-import CategoryListController from './CategoryListController'
+import CategoryListController from './CategoryListController';
 
 export default class CategoryComponent	extends Component {
 
@@ -109,7 +109,7 @@ var styles = StyleSheet.create({
 	
 	contailer:{
 		backgroundColor:'white',
-		marginTop:0,	
+		marginTop:px2dp(0),	
 	},
 	cateView:{
 		height:px2dp(44),

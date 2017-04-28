@@ -25,7 +25,11 @@ var theme = StyleSheet.create({
     contailer:{
         flex:1,
          backgroundColor:HDBGColor
-         }
+         },
+    navBarText:{
+        color: 'white',
+        fontSize: px2dp(20)
+    }
   })
 
 module.exports = {

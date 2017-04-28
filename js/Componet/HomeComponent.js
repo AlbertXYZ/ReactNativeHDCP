@@ -97,7 +97,7 @@ class HomeController extends Component{
 		return (
 			<View style={theme.contailer}>
 			<View style={theme.actionNavBar}>
-                    <Text style={{color: 'white', fontSize: px2dp(20)}}>{TabNames[0]}</Text>
+                    <Text style={theme.navBarText}>{TabNames[0]}</Text>
                 </View>
             <PullView onPullRelease={this.onPullRelease}  >
 			<ScrollView style={styles.contailer}>

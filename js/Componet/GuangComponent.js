@@ -95,7 +95,7 @@ class GuangController extends Component {
 				theme.contailer
 			} >
 			<View style={theme.actionNavBar}>
-                    <Text style={{color: 'white', fontSize: 20}}>{TabNames[1]}</Text>
+                    <Text style={theme.navBarText}>{TabNames[1]}</Text>
             </View>
             < ScrollView style = {
 				styles.contailer

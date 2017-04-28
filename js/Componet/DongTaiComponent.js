@@ -9,7 +9,9 @@ import {
   StatusBar,
   Image,
   ScrollView,
-  ListView
+  ListView,
+  PixelRatio,
+  Platform
 } from 'react-native';
 
 import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor} from '../CommonStyle/commonStyle';
@@ -71,26 +73,91 @@ class DongTaiController extends Component {
 			}).done();
 	}
 
-	selectRows(cate,rowID){
+	selectRows(object,rowID){
 		
 		if (this.props.navigator) {
-			this.props.navigator.push({title:'详情',name:'CategoryListController',component:CategoryListController,args:{tagList:cate.Tags,title:cate.Cate}});
+			alert(rowID)
 		}
 	}
 
+	showBigImage(data){
+
+		if (data.HasVideo == 1) {
+			alert('播放视频')
+		} else {
+			alert('查看大图')	
+		}
+		
+	}
+
 	renderRow(object,sectionID, rowID) {
-	 	console.log(object.userInfo)
+	 	console.log(object.data)
 	 	return (
 	 	<TouchableOpacity key={rowID} onPress={this.selectRows.bind(this,object,rowID)}>
 	 	<View style={{flexDirection: 'column'}}>
 			<View style={{flexDirection: 'row'}}>
-				<Image style={{height:50,width:50,marginTop:15,marginLeft:15,backgroundColor:'red'}} 
+				<Image style={styles.headerIcon} 
 				source = {{uri:object.userInfo.Avatar}} />
-				<Text style={{color:HDMainTextColor,marginLeft:15,marginTop:15}}>
+				<Text style={styles.userNameText}>
 				{object.userInfo.UserName}
 				</Text>
-	
+				{
+					object.userInfo.Vip == 1 
+					? <Image style={styles.flagVipIcon} source={require('../resource/DT/VIP@3x.png')}/> 
+					: <Image/> 
+				}
+				{
+					object.userInfo.Gender == 1 
+					? <Image style={styles.flagGenderIcon} source={require('../resource/DT/女@3x.png')}/> 
+					: <Image/> 
+				}
 			</View>
+			<View style={styles.contentView}>
+				<Text style={styles.contentTitle}>
+					{object.data.Title}
+				</Text>
+				<Text style={styles.contentText}>
+					{object.data.Content}
+				</Text>
+				<TouchableOpacity onPress = {this.showBigImage.bind(this,object.data)}>
+				<Image style={styles.contentImage} source={{uri:object.data.Img}}>
+				{
+					object.data.HasVideo == 1 ?
+					<Image style={{width:50,height:50}} source={require('../resource/DT/播放@3x.png')}></Image>
+					:<Image></Image>
+				}
+				</Image>
+				</TouchableOpacity>
+				<View style={styles.flagView}>
+				<Text style={styles.createTime}>
+					{object.data.CreateTime}
+				</Text>
+				<Image style={styles.diggImage} source={require('../resource/DT/赞@3x.png')}/>
+				<Text style={styles.diggText}>
+					{object.data.DiggCnt}
+				</Text>
+				<Image style={styles.commentImage} source={require('../resource/DT/评论@3x.png')}/>
+				<Text style={styles.commentText}>
+					{object.data.CommentCnt}
+				</Text>
+				</View>
+			</View>
+
+			{
+				object.data.CommentCnt > 0 ? <View style={styles.commentView}>
+				{
+					object.data.CommentList.map((comment,i)=>{
+						return (<Text style={styles.commentContent}>
+						{comment.UserName}:{comment.Content}
+						</Text>);
+					})
+				}
+				<Text style={styles.commentAll}>
+				查看全部{object.data.CommentCnt}条评论</Text>
+			</View>
+			: <View></View>
+			}
+			
 		</View>
 		</TouchableOpacity>
 	 	);
@@ -103,7 +170,7 @@ class DongTaiController extends Component {
 				theme.contailer
 			} >
 			<View style={theme.actionNavBar}>
-                    <Text style={{color: 'white', fontSize: 20}}>{TabNames[3]}</Text>
+                    <Text style={theme.navBarText}>{TabNames[3]}</Text>
                 </View>
             <ListView style = {styles.contailer}
          	 dataSource={this.state.dataSource}
@@ -118,6 +185,108 @@ var styles = StyleSheet.create({
 
 	contailer:{
 		backgroundColor:'white',
-		marginTop:0,	
+		marginTop:px2dp(0),	
+	},
+	userNameText:{
+		color:HDMainTextColor,
+		marginLeft:px2dp(15),
+		marginTop:px2dp(25),
+		fontSize:px2dp(16)
+	},
+	flagVipIcon:{
+		height:px2dp(20),
+		width:px2dp(20),
+		marginTop:px2dp(20),
+		marginLeft:px2dp(20)
+	},
+	flagGenderIcon:{
+		height:px2dp(30),
+		width:px2dp(30),
+		marginTop:px2dp(16),
+		marginLeft:px2dp(5)
+	},
+	headerIcon:{
+		height:px2dp(50),
+		width:px2dp(50),
+		marginTop:px2dp(15),
+		marginLeft:px2dp(15),
+		borderColor: '#ff8447',
+   		borderRadius: px2dp(25),
+   		borderWidth: (Platform.OS==='ios' ? 1.0 : 1.5) / PixelRatio.get()
+	},
+	contentView:{
+		flexDirection: 'column',
+		marginLeft:px2dp(80),
+		marginTop:px2dp(0),
+		marginRight:px2dp(20),
+	},
+	contentTitle:{
+		fontSize:18,
+		color:'black'
+	},
+	contentText:{
+		fontSize:px2dp(16),
+		color:HDMainTextColor,
+		marginTop:px2dp(15)
+	},
+	contentImage:{
+		marginTop:px2dp(15),
+		marginLeft:px2dp(0),
+		marginRight:px2dp(0),
+		height:px2dp(120),
+		flex: 1,
+		alignItems: 'center',
+		justifyContent:'center'
+	},
+	flagView:{
+		flexDirection:'row',
+		marginTop:px2dp(10)
+	},
+	createTime:{
+		color:HDMainTextColor,
+		fontSize:px2dp(15)
+	},
+	diggImage:{
+		width:20,height:px2dp(20),
+		marginLeft:px2dp(60)
+	},
+	diggText:{
+		textAlign:'right',
+		height:px2dp(20),
+		color:HDMainTextColor,
+		marginTop:px2dp(3)
+	},
+	commentImage:{
+		width:px2dp(20),
+		height:px2dp(20),
+		marginLeft:px2dp(10)
+	},
+	commentText:{
+		textAlign:'right',
+		height:px2dp(20),
+		color:HDMainTextColor,
+		marginTop:px2dp(3)
+	},
+	commentView:{
+		flexDirection: 'column',
+		marginLeft:px2dp(80),
+		marginTop:px2dp(10),
+		marginRight:px2dp(20),
+		marginBottom:10,
+		backgroundColor:'rgb(241,241,241)',
+		borderRadius: px2dp(4)
+	},
+	commentContent:{
+		marginLeft:px2dp(15),
+		marginTop:px2dp(6),
+		color:HDMainTextColor,
+		fontSize:px2dp(15)
+	},
+	commentAll:{
+		marginLeft:px2dp(15),
+		marginTop:px2dp(10),
+		color:HDMainTextColor,
+		fontSize:px2dp(15),
+		marginBottom:px2dp(6)
 	}
 });

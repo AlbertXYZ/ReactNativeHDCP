@@ -94,7 +94,7 @@ class CategoryController extends Component {
 				theme.contailer
 			} >
 			<View style={theme.actionNavBar}>
-                    <Text style={{color: 'white', fontSize: px2dp(20)}}>{TabNames[2]}</Text>
+                    <Text style={theme.navBarText}>{TabNames[2]}</Text>
                 </View>
             <ListView style = {styles.contailer}
          	 dataSource={this.state.dataSource}

@@ -15,9 +15,10 @@ import {
 } from 'react-native';
 
 import px2dp from '../Utils/px2dp';
-import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor} from '../CommonStyle/commonStyle';
-import {HDGG01_URL,TabNames} from '../Utils/Const';
+import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor,HDHUDTextColor} from '../CommonStyle/commonStyle';
+import {HDGG01_URL,TabNames,LoadingKey} from '../Utils/Const';
 import {PullView} from 'react-native-pull';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 export default class GuangComponent extends Component {
 
@@ -35,7 +36,8 @@ class GuangController extends Component {
 	
 	  this.state = {
 	  		tagNames:['菜谱大全','APP推荐','厨房宝典','营养餐桌','食材百科','意见反馈'],
-	  		list:[]
+	  		list:[],
+	  		visibleHud: true
 	  };
 	}
 
@@ -56,7 +58,8 @@ class GuangController extends Component {
 			.then((responseData) => {
 				console.log(responseData)
 				this.setState({
-					list:responseData.result.list
+					list:responseData.result.list,
+					visibleHud:false
 				})
 				
 			}).done();
@@ -97,6 +100,7 @@ class GuangController extends Component {
 			<View style={theme.actionNavBar}>
                     <Text style={theme.navBarText}>{TabNames[1]}</Text>
             </View>
+            <Spinner visible={this.state.visibleHud} textContent={LoadingKey} textStyle={{color: HDHUDTextColor}} />
             < ScrollView style = {
 				styles.contailer
 				} >

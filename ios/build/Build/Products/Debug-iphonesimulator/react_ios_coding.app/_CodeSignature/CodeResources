@@ -32,6 +32,22 @@
 		<data>
 		Xyqwaxb9mUlbtd+ONEBz+sWIvaA=
 		</data>
+		<key>Entypo.ttf</key>
+		<data>
+		R4cKZ91Qhxdl95nKqX2ochnuR8U=
+		</data>
+		<key>EvilIcons.ttf</key>
+		<data>
+		QZrcvnS7qREj2zspB3XjYvIS8+U=
+		</data>
+		<key>FontAwesome.ttf</key>
+		<data>
+		E7HqtlqYPHpzvHmXxHnWaUP3xss=
+		</data>
+		<key>Foundation.ttf</key>
+		<data>
+		SyvObHkkk6SlcWtv7C2+/olJLD8=
+		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
 		FjaxID2XV3QetIN1pv8URQFeCMM=
@@ -251,7 +267,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3Kas+v81o0/ZwmTrRD/KB/j6/2k=
+		zYdpUsQKihvfVJfsZf37BL9X7ZA=
+		</data>
+		<key>Ionicons.ttf</key>
+		<data>
+		D3lWcE/mG0nEHqGiIFEkD3AKK0Q=
 		</data>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<data>
@@ -269,6 +289,18 @@
 		<data>
 		wqNomWKyZmsLEORgxHi1wBpfhzk=
 		</data>
+		<key>MaterialCommunityIcons.ttf</key>
+		<data>
+		W28Wp8frwGzTm8xVYZzGjCm0cW4=
+		</data>
+		<key>MaterialIcons.ttf</key>
+		<data>
+		/AXeMSNOAJD33cKM4bI69AJssdo=
+		</data>
+		<key>Octicons.ttf</key>
+		<data>
+		nDHzgr8cV2wncaeFbvmESHJDPUg=
+		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
@@ -279,7 +311,7 @@
 		</data>
 		<key>PlugIns/react_ios_codingTests.xctest.dSYM/Contents/Resources/DWARF/react_ios_codingTests</key>
 		<data>
-		IxLLEDnDVVO51GRkZpiAD0ON15E=
+		57tgkuK10kK05inp/8kuYD1rKto=
 		</data>
 		<key>PlugIns/react_ios_codingTests.xctest/Info.plist</key>
 		<data>
@@ -292,6 +324,14 @@
 		<key>PlugIns/react_ios_codingTests.xctest/react_ios_codingTests</key>
 		<data>
 		KHGR8QRVa9S11MtczfXhuepumwI=
+		</data>
+		<key>SimpleLineIcons.ttf</key>
+		<data>
+		n/uBpaEREuKS8swyPphIa61ZdZk=
+		</data>
+		<key>Zocial.ttf</key>
+		<data>
+		C9pZx7zT05J94EfgkYdaRCi/0as=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -371,6 +411,50 @@
 			<key>hash2</key>
 			<data>
 			uL0kxL5zJfCZrUe9W50gsLY/i/NyO3v/sA4AYE1BYos=
+			</data>
+		</dict>
+		<key>Entypo.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			R4cKZ91Qhxdl95nKqX2ochnuR8U=
+			</data>
+			<key>hash2</key>
+			<data>
+			3QhJoVkfiNp5N7I/kiQYpc7FTgdeCePMyo/rYgFvqoI=
+			</data>
+		</dict>
+		<key>EvilIcons.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QZrcvnS7qREj2zspB3XjYvIS8+U=
+			</data>
+			<key>hash2</key>
+			<data>
+			J9GohnZmGjoiaVdpUtb3ANoFZEvAMFUR3iO3D3HKVDY=
+			</data>
+		</dict>
+		<key>FontAwesome.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			E7HqtlqYPHpzvHmXxHnWaUP3xss=
+			</data>
+			<key>hash2</key>
+			<data>
+			qljzPyOaD7AvXHpsRcBD16msmgkzNYBmlOzW1O3A1qg=
+			</data>
+		</dict>
+		<key>Foundation.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SyvObHkkk6SlcWtv7C2+/olJLD8=
+			</data>
+			<key>hash2</key>
+			<data>
+			fh3QPdTOkLZYBSVUzXRZ3xZxZxc4mlUvpMbVal+JM+Y=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -963,6 +1047,17 @@
 			b9YIyVX96976hp2NWTB5WiYG/wRjSco9afIzJ4LhLqM=
 			</data>
 		</dict>
+		<key>Ionicons.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			D3lWcE/mG0nEHqGiIFEkD3AKK0Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			u0dnmwuuuEgbf1HGitM65aUmc2y1CxcXzGD/a2X5CKM=
+			</data>
+		</dict>
 		<key>LaunchImage-700-568h@2x.png</key>
 		<dict>
 			<key>hash</key>
@@ -1007,6 +1102,39 @@
 			qP5i/kA3lbO8DYKNc2C2M3G++UwhEoQ09IGHc6WKCrc=
 			</data>
 		</dict>
+		<key>MaterialCommunityIcons.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			W28Wp8frwGzTm8xVYZzGjCm0cW4=
+			</data>
+			<key>hash2</key>
+			<data>
+			MDrqh7+l+hNgAV8dCByqY6LZ0ainLHm9rBg2H+vNdnU=
+			</data>
+		</dict>
+		<key>MaterialIcons.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/AXeMSNOAJD33cKM4bI69AJssdo=
+			</data>
+			<key>hash2</key>
+			<data>
+			t/Sjq1YgSPKN0fppFgG8QzY6YdD4dtFtgxbFLk8y1pY=
+			</data>
+		</dict>
+		<key>Octicons.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nDHzgr8cV2wncaeFbvmESHJDPUg=
+			</data>
+			<key>hash2</key>
+			<data>
+			zLOa3HG6r1FR8G3HAL3RBNLhvSx9Ru2iAlXyNPR6vuo=
+			</data>
+		</dict>
 		<key>PlugIns/react_ios_codingTests.xctest.dSYM/Contents/Info.plist</key>
 		<dict>
 			<key>hash</key>
@@ -1022,11 +1150,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IxLLEDnDVVO51GRkZpiAD0ON15E=
+			57tgkuK10kK05inp/8kuYD1rKto=
 			</data>
 			<key>hash2</key>
 			<data>
-			gWK9yCOU+clOLvZB/Y3RGMpB6IVrpFZC7XvNBBh46p8=
+			MgkNwoL0XyL6vpXesnxh3hjs2dgsJMtFUY7SyrpbxCE=
 			</data>
 		</dict>
 		<key>PlugIns/react_ios_codingTests.xctest/Info.plist</key>
@@ -1060,6 +1188,28 @@
 			<key>hash2</key>
 			<data>
 			FI26jWpbqa/Po40GY2UzbZcHkzBLmgJdKzhoLFk6EE8=
+			</data>
+		</dict>
+		<key>SimpleLineIcons.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n/uBpaEREuKS8swyPphIa61ZdZk=
+			</data>
+			<key>hash2</key>
+			<data>
+			P1Ad2wXHCCm7tRz+nKn/9X854GBFfCV7PM8l33Z/CHA=
+			</data>
+		</dict>
+		<key>Zocial.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			C9pZx7zT05J94EfgkYdaRCi/0as=
+			</data>
+			<key>hash2</key>
+			<data>
+			17EKHr4YMOWi8I9JA7moDiwZEsDdL3O5P88r+DIhZgI=
 			</data>
 		</dict>
 	</dict>

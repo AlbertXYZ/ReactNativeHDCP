@@ -13,6 +13,7 @@ var ScreenScale = Dimensions.get('window').scale;
 var HDMainTextColor = 'rgb(105,105,105)'
 var HDThemeColor = '#81c04d'
 var HDBGColor = 'rgb(241,241,241)'
+var HDHUDTextColor = '#FFF'
 
 var theme = StyleSheet.create({
     actionNavBar: {
@@ -39,5 +40,6 @@ module.exports = {
 	HDMainTextColor,
   HDThemeColor,
   theme,
-  HDBGColor
+  HDBGColor,
+  HDHUDTextColor
 }

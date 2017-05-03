@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import HDNavigationBar from '../Custom/HDNavigationBar';
-import BaseComponent from './BaseComponent'
+import BaseComponent from './BaseComponent';
 import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
 

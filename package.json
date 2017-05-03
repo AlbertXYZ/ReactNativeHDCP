@@ -10,11 +10,13 @@
     "react": "~15.4.0",
     "react-native": "0.41.2",
     "react-native-code-push": "^2.0.2-beta",
+    "react-native-loading-spinner-overlay": "^0.4.4",
     "react-native-progress-hud": "^1.0.4",
     "react-native-pull": "^2.0.2",
     "react-native-swRefresh": "^1.2.3",
     "react-native-tab-navigator": "^0.3.3",
-    "react-native-vector-icons": "^4.0.1"
+    "react-native-vector-icons": "^4.0.1",
+    "react-native-video": "^1.0.0"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",

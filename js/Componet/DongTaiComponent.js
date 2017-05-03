@@ -14,9 +14,10 @@ import {
   Platform
 } from 'react-native';
 
-import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor} from '../CommonStyle/commonStyle';
+import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor,HDHUDTextColor} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
-import {TabNames,HDDY01_URL} from '../Utils/Const';
+import {TabNames,HDDY01_URL,LoadingKey} from '../Utils/Const';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 export default class DongTaiComponent extends Component {
 
@@ -40,6 +41,7 @@ class DongTaiController extends Component {
 	
 	  this.state = {
 	  	list:[],
+	  	visibleHud: true,
 	  	dataSource: new ListView.DataSource({
       	  rowHasChanged: (row1, row2) => row1 !== row2
         })
@@ -67,6 +69,7 @@ class DongTaiController extends Component {
 			.then((responseData) => {
 				console.log(responseData)
 				this.setState({
+					visibleHud:false,
 					list:responseData.result.list,
 					dataSource: this.state.dataSource.cloneWithRows(responseData.result.list)
 				})
@@ -83,6 +86,7 @@ class DongTaiController extends Component {
 	showBigImage(data){
 
 		if (data.HasVideo == 1) {
+			console.log(data)
 			alert('播放视频')
 		} else {
 			alert('查看大图')	
@@ -157,7 +161,7 @@ class DongTaiController extends Component {
 			</View>
 			: <View></View>
 			}
-			
+			<View style={styles.cellLine}></View>
 		</View>
 		</TouchableOpacity>
 	 	);
@@ -172,6 +176,7 @@ class DongTaiController extends Component {
 			<View style={theme.actionNavBar}>
                     <Text style={theme.navBarText}>{TabNames[3]}</Text>
                 </View>
+            <Spinner visible={this.state.visibleHud} textContent={LoadingKey} textStyle={{color: HDHUDTextColor}} />
             <ListView style = {styles.contailer}
          	 dataSource={this.state.dataSource}
          	 renderRow={this.renderRow.bind(this)}
@@ -288,5 +293,12 @@ var styles = StyleSheet.create({
 		color:HDMainTextColor,
 		fontSize:px2dp(15),
 		marginBottom:px2dp(6)
+	},
+	cellLine:{
+		backgroundColor:HDBGColor,
+		height:px2dp(10),
+		flex:1,
+		marginBottom:0,
+		marginLeft:px2dp(0)
 	}
 });

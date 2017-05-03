@@ -10,10 +10,11 @@ import {
   ListView
 } from 'react-native';
 
-import {theme,HDMainTextColor} from '../CommonStyle/commonStyle';
+import {theme,HDMainTextColor,HDThemeColor,HDHUDTextColor} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
-import {HDCG01_URL,TabNames} from '../Utils/Const';
+import {HDCG01_URL,TabNames,LoadingKey} from '../Utils/Const';
 import CategoryListController from './CategoryListController';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 export default class CategoryComponent	extends Component {
 
@@ -36,6 +37,7 @@ class CategoryController extends Component {
 	  super(props);
 	  
 	  this.state = {
+	  	visibleHud: true,
 	  	dataSource: new ListView.DataSource({
       	  rowHasChanged: (row1, row2) => row1 !== row2
         })
@@ -60,6 +62,7 @@ class CategoryController extends Component {
 				console.log(responseData)
 				console.log(responseData.result.list[0])
 				this.setState({
+					visibleHud:false,
 					dataSource: this.state.dataSource.cloneWithRows(responseData.result.list)
 				})
 			}).done();
@@ -96,6 +99,7 @@ class CategoryController extends Component {
 			<View style={theme.actionNavBar}>
                     <Text style={theme.navBarText}>{TabNames[2]}</Text>
                 </View>
+            <Spinner visible={this.state.visibleHud} textContent={LoadingKey} textStyle={{color: HDHUDTextColor}} />
             <ListView style = {styles.contailer}
          	 dataSource={this.state.dataSource}
          	 renderRow={this.renderRow.bind(this)}

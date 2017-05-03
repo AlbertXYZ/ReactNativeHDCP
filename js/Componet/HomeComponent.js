@@ -15,12 +15,13 @@ import {
 } from 'react-native';
 
 import {RequestManager} from '../NetWork/RequestManager';
-import {HDHM01_URL,TabNames} from '../Utils/Const';
-import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor} from '../CommonStyle/commonStyle';
+import {HDHM01_URL,TabNames,LoadingKey} from '../Utils/Const';
+import {ScreenHeight,ScreenWidth,HDMainTextColor,theme,HDBGColor,HDThemeColor,HDHUDTextColor} from '../CommonStyle/commonStyle';
 import px2dp from '../Utils/px2dp';
 import HDNavigationBar from '../Custom/HDNavigationBar';
-import BaseComponent from './BaseComponent'
+import BaseComponent from './BaseComponent';
 import {PullView} from 'react-native-pull';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 export default class HomeComponent	extends Component {
 
@@ -38,7 +39,8 @@ class HomeController extends Component{
 	  this.state = {
 	  	tagList:[],
 	  	wikiList:[],
-	  	collectList:[]
+	  	collectList:[],
+	  	visibleHud: true
 	};
 	}
 
@@ -69,7 +71,8 @@ class HomeController extends Component{
 				this.setState({
 					tagList: responseData.result.tag_list,
 					wikiList:responseData.result.wiki_list,
-					collectList:responseData.result.collect_list
+					collectList:responseData.result.collect_list,
+					visibleHud:false
 				})
 			}).done();
 	}
@@ -99,6 +102,7 @@ class HomeController extends Component{
 			<View style={theme.actionNavBar}>
                     <Text style={theme.navBarText}>{TabNames[0]}</Text>
                 </View>
+            <Spinner visible={this.state.visibleHud} textContent={LoadingKey} textStyle={{color: HDHUDTextColor}} />
             <PullView onPullRelease={this.onPullRelease}  >
 			<ScrollView style={styles.contailer}>
 				<Image source={require('../resource/home_bg.jpg')} style={{height: 200}} />

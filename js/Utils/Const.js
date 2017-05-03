@@ -13,8 +13,11 @@ var HDDY02_URL = 'http://api.hoto.cn/index.php?appid=4&appkey=573bbd2fbd1a6bac08
 
 var TabNames   = ['首页','逛逛','分类','动态','我'];
 
+var LoadingKey = '加载中...'
+
 module.exports = {
 	TabNames,
+	LoadingKey,
 	HDHM01_URL,
 	HDCG01_URL,
 	HDGG01_URL,

@@ -83,6 +83,40 @@ class DongTaiController extends Component {
 		}
 	}
 
+	renderRow(object,sectionID, rowID) {
+	 	console.log(object.data)
+	 	return (
+	 		<TouchableOpacity key={rowID} onPress={this.selectRows.bind(this,object,rowID)}>
+	 			<DTCell object={object} navigator = {this.props.navigator}/>
+	 		</TouchableOpacity>
+	 	);
+	 }
+
+	render() {
+
+		return (
+			< View style = {
+				theme.contailer
+			} >
+			<View style={theme.actionNavBar}>
+                    <Text style={theme.navBarText}>{TabNames[3]}</Text>
+                </View>
+            <Spinner visible={this.state.visibleHud} textContent={LoadingKey} textStyle={{color: HDHUDTextColor}} />
+            <ListView style = {styles.contailer}
+         	 dataSource={this.state.dataSource}
+         	 renderRow={this.renderRow.bind(this)}
+      	    />
+			< /View>
+		);
+	};
+}
+
+class DTCell extends Component {
+
+	static propTypes = {
+	  object: React.PropTypes.object,
+	}
+
 	showBigImage(data){
 
 		if (data.HasVideo == 1) {
@@ -94,10 +128,10 @@ class DongTaiController extends Component {
 		
 	}
 
-	renderRow(object,sectionID, rowID) {
-	 	console.log(object.data)
-	 	return (
-	 	<TouchableOpacity key={rowID} onPress={this.selectRows.bind(this,object,rowID)}>
+	render (){
+		var object = this.props.object
+		return (
+			
 	 	<View style={{flexDirection: 'column'}}>
 			<View style={{flexDirection: 'row'}}>
 				<Image style={styles.headerIcon} 
@@ -148,7 +182,8 @@ class DongTaiController extends Component {
 			</View>
 
 			{
-				object.data.CommentCnt > 0 ? <View style={styles.commentView}>
+				object.data.CommentCnt > 0 
+				? <View style={styles.commentView}>
 				{
 					object.data.CommentList.map((comment,i)=>{
 						return (<Text key={i} style={styles.commentContent}>
@@ -156,34 +191,17 @@ class DongTaiController extends Component {
 						</Text>);
 					})
 				}
-				<Text style={styles.commentAll}>
-				查看全部{object.data.CommentCnt}条评论</Text>
-			</View>
-			: <View></View>
+					<Text style={styles.commentAll}>
+					查看全部{object.data.CommentCnt}条评论</Text>
+					</View>
+				: <View></View>
 			}
 			<View style={styles.cellLine}></View>
 		</View>
-		</TouchableOpacity>
-	 	);
-	 }
-
-	render() {
-
-		return (
-			< View style = {
-				theme.contailer
-			} >
-			<View style={theme.actionNavBar}>
-                    <Text style={theme.navBarText}>{TabNames[3]}</Text>
-                </View>
-            <Spinner visible={this.state.visibleHud} textContent={LoadingKey} textStyle={{color: HDHUDTextColor}} />
-            <ListView style = {styles.contailer}
-         	 dataSource={this.state.dataSource}
-         	 renderRow={this.renderRow.bind(this)}
-      	    />
-			< /View>
+		
 		);
 	};
+
 }
 
 var styles = StyleSheet.create({
@@ -215,9 +233,7 @@ var styles = StyleSheet.create({
 		width:px2dp(50),
 		marginTop:px2dp(15),
 		marginLeft:px2dp(15),
-		borderColor: '#ff8447',
    		borderRadius: px2dp(25),
-   		borderWidth: (Platform.OS==='ios' ? 1.0 : 1.5) / PixelRatio.get()
 	},
 	contentView:{
 		flexDirection: 'column',

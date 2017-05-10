@@ -22,6 +22,7 @@ import HDNavigationBar from '../Custom/HDNavigationBar';
 import BaseComponent from './BaseComponent';
 import {PullView} from 'react-native-pull';
 import Spinner from 'react-native-loading-spinner-overlay';
+import CookbookListController from './CookbookListController';
 
 export default class HomeComponent	extends Component {
 
@@ -173,14 +174,15 @@ class TagListView extends Component{
 	  tagList: React.PropTypes.array
 	}
 
-	tagAction(tagId){
-		alert(tagId)
+	tagAction(tag){
+		this.props.navigator.push({title:tag.Name,name:'CookbookListController',
+		component:CookbookListController,args:{title:tag.Name,tagObject:tag}});
 	}
 
 	tagListItem(obj){
 		return (<TouchableOpacity 
 						style={{flex:1}} key={obj.Id} 
-						onPress={this.tagAction.bind(this,obj.Id)}><View 
+						onPress={this.tagAction.bind(this,obj)}><View 
 						style={styles.tagListItem}><Text 
 						style={styles.tagListText}>{obj.Name}</Text></View></TouchableOpacity>);
 	}

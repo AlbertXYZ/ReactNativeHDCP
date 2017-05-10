@@ -65,7 +65,7 @@ class GuangController extends Component {
 			}).done();
 	}
 
-	itemAction(flag){
+	itemAction(flag){  
 
 		switch(flag){
 			case 1:
@@ -84,7 +84,7 @@ class GuangController extends Component {
 			alert('食材百科')	
 			break;
 			case 6:
-			alert('意见反馈')	
+			alert('意见反馈')		
 			break;
 			default:
 			return

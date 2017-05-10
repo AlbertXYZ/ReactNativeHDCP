@@ -60,7 +60,7 @@ class DongTaiController extends Component {
 		formData.append("offset","0"); 
 		formData.append("uid","8752979"); 
 		formData.append("timestamp","1493083021"); 
-		fetch('http://api.haodou.com/index.php?appid=4&appkey=573bbd2fbd1a6bac082ff4727d952ba3&appsign=e746a91c3454fce7470904efc64a06c3&channel=appstore&deviceid=0f607264fc6318a92b9e13c65db7cd3c%7C65E9FB11-64B3-4B5C-A62C-4B53FD796AC4%7C97F90A81-F659-474D-B27E-BE58CDFF30C0&format=json&loguid=8752979&method=UserFeed.getFollowUserFeed&nonce=1458377095&sessionid=1458376760&signmethod=md5&timestamp=1458377095&uuid=7408f5dd81db1165cd1896e8175a75e4&v=2&vc=46&vn=v6.0.3', {
+		fetch(HDDY01_URL, {
 				method:'POST',
 				body:formData,	
 				headers: {},

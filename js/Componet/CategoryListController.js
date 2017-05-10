@@ -57,7 +57,7 @@ export default class CategoryListController  extends BaseComponent{
       </TouchableOpacity>
       );
   }
-  
+    
   render(){
     return (
       <View style={styles.contailer}>

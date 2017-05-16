@@ -80,11 +80,11 @@ export default class CookbookListController  extends BaseComponent{
   }
 
   renderRow(object,sectionID, rowID) {
-    console.log(object)
-    console.log(this.getTagString(object.Stuff))
-    var stuffStr = this.getTagString(object.Stuff);
+    //console.log(object)
+    var stuffStr = this.getTagString(object.Stuff)
     return (
       <TouchableOpacity key={rowID} onPress={this.selectRows.bind(this,object,rowID)}>
+      <View style={{flexDirection: 'column',flex:1}}>
       <View style={{flexDirection: 'row',flex:1}}>
         <Image source={{uri:object.Cover}} style={styles.coverView}/>
           <View style={styles.contentView} >
@@ -94,6 +94,8 @@ export default class CookbookListController  extends BaseComponent{
             <Text style={styles.tagText} numberOfLines={1}>
             {stuffStr}</Text>
           </View>
+      </View>
+      <View style={styles.cellLine}></View>
       </View>
       </TouchableOpacity>
     );
@@ -145,5 +147,11 @@ var styles = StyleSheet.create({
     fontSize:px2dp(15),
     color:HDMainTextColor,
     marginTop:px2dp(13)
+  },
+  cellLine:{
+    backgroundColor:'rgb(200,200,200)',
+    marginLeft:px2dp(15),
+    marginBottom:0,
+    height:px2dp(0.6)
   }
 })

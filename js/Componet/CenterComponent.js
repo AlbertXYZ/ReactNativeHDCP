@@ -9,7 +9,8 @@ import {
   ScrollView,
   ListView,
   Platform,
-  PixelRatio
+  PixelRatio,
+  ActionSheetIOS
 } from 'react-native';
 
 import {theme,ScreenWidth,HDBGColor,HDMainTextColor} from '../CommonStyle/commonStyle';
@@ -17,14 +18,21 @@ import px2dp from '../Utils/px2dp';
 import {TabNames} from '../Utils/Const';
 import Video from 'react-native-video';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import ImagePicker from 'react-native-image-picker';
+
+var BUTTONS = [
+  '拍照',
+  '相册',
+  '取消',
+];
+var DESTRUCTIVE_INDEX = 3;
+var CANCEL_INDEX = 4;
 
 export default class CenterComponent extends Component {
 
 	constructor(props) {
 		super(props);
-		
 		this.state = {
-			
 		};
 	}
 	render(){
@@ -44,10 +52,52 @@ class CenterController extends Component {
 	  		{'id':2,'title':'动态',icon:'hd_dt_icon'},
 	  		{'id':3,'title':'话题',icon:'hd_ht_icon'},
 	  		{'id':4,'title':'消息',icon:'hd_xx_icon'},
-	  		{'id':5,'title':'设置',icon:'hd_sz_icon'}]
+	  		{'id':5,'title':'设置',icon:'hd_sz_icon'}],
+	  		clicked:'none',
+	  		avatarSource: {uri:'http://odum9helk.qnssl.com/resource/gogopher.jpg?imageView2/1/w/80/h/80'},
+  		    videoSource: null
 	  };
 	}
+
+  selectPhotoTapped() {
+    const options = {
+      quality: 1.0,
+      maxWidth: 500,
+      maxHeight: 500,
+      title:'',
+      takePhotoButtonTitle:'拍照',
+      chooseFromLibraryButtonTitle:'从相册选择',
+      cancelButtonTitle:'取消',
+      storageOptions: {
+        skipBackup: true
+      }
+    };
+
+    ImagePicker.showImagePicker(options, (response) => {
 	
+      console.log('Response = ', response);
+
+      if (response.didCancel) {
+        console.log('User cancelled photo picker');
+      }
+      else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      }
+      else if (response.customButton) {
+        console.log('User tapped custom button: ', response.customButton);
+      }
+      else {
+        let source = { uri: response.uri };
+
+        // You can also display the image using data:
+        // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+        this.setState({
+          avatarSource: source
+        });
+      }
+    });
+  }
+
 	selectRows(item,rowID){
 		
 		if (rowID == 0) {
@@ -99,7 +149,7 @@ class CenterController extends Component {
 		</TouchableOpacity>
 	 	);
 	 }
-
+	
 	render() {
 		return (
 			< View style = {
@@ -112,7 +162,9 @@ class CenterController extends Component {
 				styles.contailer
 				} >
 				<Image  source={require('../resource/home_bg.jpg')} style={styles.headerView}>
-      			  <Image source={require('../resource/Center/header.jpg')} style={styles.headerIcon} />
+				<TouchableOpacity onPress={this.selectPhotoTapped.bind(this)} >
+      			<Image source={this.state.avatarSource} style={styles.headerIcon} />
+      			</TouchableOpacity>
      			 </Image>
      			 <View style={{marginTop:10}}>
 				{
@@ -145,7 +197,6 @@ var styles = StyleSheet.create({
 		height: px2dp(80),
 		width: px2dp(80),
 		marginLeft:(ScreenWidth-80)/2,
-		borderColor: '#ff8447',
    		borderRadius: px2dp(40),
    		borderWidth: (Platform.OS==='ios' ? 1.0 : 1.5) / PixelRatio.get()
 	},

@@ -9,7 +9,9 @@
   "dependencies": {
     "react": "~15.4.0",
     "react-native": "0.41.2",
+    "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-code-push": "^2.0.2-beta",
+    "react-native-image-picker": "^0.26.3",
     "react-native-loading-spinner-overlay": "^0.4.4",
     "react-native-progress-hud": "^1.0.4",
     "react-native-pull": "^2.0.2",

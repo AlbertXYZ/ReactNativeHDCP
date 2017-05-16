@@ -30,7 +30,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		Xyqwaxb9mUlbtd+ONEBz+sWIvaA=
+		HgqogDXquMEn/2rdFuB9naeFXR4=
 		</data>
 		<key>Entypo.ttf</key>
 		<data>
@@ -267,7 +267,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zYdpUsQKihvfVJfsZf37BL9X7ZA=
+		BLd0hbNmIyzWyL2DbjQjNyxA0pg=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -311,7 +311,7 @@
 		</data>
 		<key>PlugIns/react_ios_codingTests.xctest.dSYM/Contents/Resources/DWARF/react_ios_codingTests</key>
 		<data>
-		57tgkuK10kK05inp/8kuYD1rKto=
+		RRw4aq+PC3Cp6Qg0L8UGfCpH8WE=
 		</data>
 		<key>PlugIns/react_ios_codingTests.xctest/Info.plist</key>
 		<data>
@@ -323,7 +323,7 @@
 		</data>
 		<key>PlugIns/react_ios_codingTests.xctest/react_ios_codingTests</key>
 		<data>
-		KHGR8QRVa9S11MtczfXhuepumwI=
+		aH5Q52+xJrHcbkPvKCLQI9ftDxE=
 		</data>
 		<key>SimpleLineIcons.ttf</key>
 		<data>
@@ -332,6 +332,10 @@
 		<key>Zocial.ttf</key>
 		<data>
 		C9pZx7zT05J94EfgkYdaRCi/0as=
+		</data>
+		<key>icomoon.ttf</key>
+		<data>
+		jAClRVR5vYZLVZ0X4jJ90jZNaEs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -406,11 +410,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Xyqwaxb9mUlbtd+ONEBz+sWIvaA=
+			HgqogDXquMEn/2rdFuB9naeFXR4=
 			</data>
 			<key>hash2</key>
 			<data>
-			uL0kxL5zJfCZrUe9W50gsLY/i/NyO3v/sA4AYE1BYos=
+			+1SkeiEre2Xl2nXzK21pi8wKjo8nMMC1IQQchfHtoC8=
 			</data>
 		</dict>
 		<key>Entypo.ttf</key>
@@ -1150,11 +1154,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			57tgkuK10kK05inp/8kuYD1rKto=
+			RRw4aq+PC3Cp6Qg0L8UGfCpH8WE=
 			</data>
 			<key>hash2</key>
 			<data>
-			MgkNwoL0XyL6vpXesnxh3hjs2dgsJMtFUY7SyrpbxCE=
+			mtHdiMms44b7P93+ef4Fi+IIhmi24wOxlWEwFuVd6Dw=
 			</data>
 		</dict>
 		<key>PlugIns/react_ios_codingTests.xctest/Info.plist</key>
@@ -1183,11 +1187,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KHGR8QRVa9S11MtczfXhuepumwI=
+			aH5Q52+xJrHcbkPvKCLQI9ftDxE=
 			</data>
 			<key>hash2</key>
 			<data>
-			FI26jWpbqa/Po40GY2UzbZcHkzBLmgJdKzhoLFk6EE8=
+			PKo8Y3wli+ItOtFZ4L6HpQuZioh3sowZT6ZLoQZW81g=
 			</data>
 		</dict>
 		<key>SimpleLineIcons.ttf</key>
@@ -1210,6 +1214,17 @@
 			<key>hash2</key>
 			<data>
 			17EKHr4YMOWi8I9JA7moDiwZEsDdL3O5P88r+DIhZgI=
+			</data>
+		</dict>
+		<key>icomoon.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jAClRVR5vYZLVZ0X4jJ90jZNaEs=
+			</data>
+			<key>hash2</key>
+			<data>
+			jA42U+gnBAl+LrmMxWxr4o4YHzKTgVNjnoDvyyLtqEc=
 			</data>
 		</dict>
 	</dict>
